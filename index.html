@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="light">
+<html lang="en" data-bs-theme="dark">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +11,8 @@
     <script src="scripts.js" defer></script>
 
 </head>
-  <body style="height: 2500px;">
+  <body style="height: 3000px;">
+
     <!--Navigation bar with fixed to top of screen, expanded items at medium screen size, white background-->
     <nav class="navbar nav-tabs sticky-top navbar-expand-lg bg-primary-subtle">
         <!--The home button/Title of navbar-->
@@ -80,258 +81,276 @@
             </ul>
         </div>
 
-        <a id="darkMode" href="#" class="mx-2"><img src="images/lightMode.png" style="width:35px;" id="modeIcon"></a>
+        <a id="darkMode" href="#" class="mx-2"><img src="images/darkMode.png" style="width:35px;" id="modeIcon"></a>
     </nav>
-
-    <!--Personal Info-->
-    <div class="container  " id="personalInfo" style="padding-top: 80px; margin-top: -60px;">
-        <div class="row">
-            <div class="col-lg-2 col-md-3 col-sm ">
-                    <img src="images/myPicture.jpg" class="border rounded-5" style="height: 200px;" >
-            </div>
-            
-            <div class="col-8">
-                <h4><span><img src="images/personalInfo.png" style="width:35px"></span><b>  Personal Info</b></h4>
-                <table class="table table-hover">
-                    <tbody>
-                        <tr>
-                            <td><b>Name</b></td>
-                            <td>Isaiah Chong Kai Ean</td>
-                        </tr>
-                        <tr>
-                            <td><b>Residential Address</b></td>
-                            <td>B-12-13A, Saville @Kajang, Jalan Reko, 43000 Kajang, Selangor.</td>
-                        </tr>
-                        <tr>
-                            <td><b>Contact No.</b></td>
-                            <td>+6014-89900302</td>
-                        </tr>
-                        <tr>
-                            <td><b>Email</b></td>
-                            <td>isaiah.chong@gmail.com</td>
-                        </tr>
-                        <tr>
-                            <td><b>Career Objective</b></td>
-                            <td style="text-align: justify;">To secure a position as a Front-End Developer based on my skills in HTML, CSS & Javascript</td>
-                        </tr>
-                    </tbody>
-                </table> 
-            </div>
-        </div>
-        <hr>
-    </div>
-
-    <!--Education-->
-    <div class="container" id="education">
-        <div class="row">
-            <div class="col">
-                <h4><img src="images/education.png" style="width:40px" class="mx-1"><b>Education</b></h4>               
-            </div>
-        </div>
-        <!--Tertiary level education-->
-        <div class="row my-1">           
-                <h5 id="tertiaryLevel" style="padding-top: 65px; margin-top: -60px;"><b>Tertiary Level</b></h5>
-                <div class="col border rounded-start-4" style="background-color: #103266; margin-left: 13px;"></div>
-                <div class="col-5 border border-3 border-dark-subtle">
-                    <b>UniKL Malaysia-France Institute</b><br>
-                    January 2019 to January 2022<br>
-                    Bachelor of Mechatronics Engineering Technology with Honours<br>
-                    CGPA: 3.89
+    
+    <!--background wallpaper with my picture-->
+    <div class="container"style="height:450px;">
+        <center>
+            <div class="card">
+                <img src="images/sceneryDark.jpg" alt="backgroundImage" 
+                class="card-img-top" style="height:450px;" id="bgImage">
+                <div class="card-img-overlay card-inverse">
+                    <br><br><br><br><br><br><br>
+                    <img src="images/myPicture.jpg" class="border rounded-5"
+                    style="height:180px;"><br>
+                    <p id="myName" class="text-light">
+                        <span style="font-size: x-large;"><b>Isaiah Chong Kai Ean</b></span><br>
+                        Web Developer Enthusiast
+                    </p>
                 </div>
-                <div class="col-5  border border-3 border-dark-subtle">
-                    <b>German-Malaysian Institute</b><br>
-                    January 2016 to December 2018<br>
-                    Diploma in Industrial Electronics (Mechatronics)<br>
-                    CGPA: 3.86
-                </div>
-                <div class="col border rounded-end-4" style="background-color: #103266;margin-right: 13px;"></div>
-        </div>
+            </div>
+        </center>
 
-        <!--Secondary level education-->
-        <div class="row my-2">
-            <h5 id="secondaryLevel" style="padding-top: 65px; margin-top: -60px;"><b>Secondary Level</b></h5>
-            <div class="col border rounded-start-4" style="background-color: #103266; margin-left: 13px;"></div>
-                <div class="col-8 border border-3 border-dark-subtle">
-                    <b>Sekolah Menengah Kebangsaan Lutong</b><br>
-                    Year 2010 - Year 2014<br>
-                    Sijil Pelajaran Malaysia (SPM)<br>
-                    Results: 9As
-                </div>
-                <div class="col border rounded-end-4" style="background-color: #103266;margin-right: 13px;"></div>
-        </div>
-        <hr>
     </div>
 
-
-    <!--Certification-->
-    <div class="container" id="certification" style="padding-top: 60px; margin-top: -60px;">
-        <div class="row">
-            <h5><img src="images/certification.png" style="height: 30px;"><b>  Professional Certificates</b></h5>
-            <div class="col border border-3 text-center border-primary-subtle" style="margin-left: 13px;">
-                <b>SolidWorks Mechanical Design Certificate</b><br>
-                Level: Associate
+    <!--Carousel for displaying content-->
+    <div class="container my-4">
+        <div id="carousel" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
             </div>
-            <div class="col border border-3 text-center">
-                <b>Introduction to Python</b><br>
-                By: Dream Catcher
-            </div>
-            <div class="col border border-3 text-center border-primary-subtle" style="margin-right: 13px;">
-                <b>Introduction to Web Development with HTML, CSS, Javascript</b><br>
-                By: IBM
-            </div>
-        </div>
-        <div class="row text-center" >
-            <div class="col border border-3" style="margin-left: 13px;">
-                <b>Getting Started with Git and Github</b><br>
-                By: IBM<br><br> 
-                
-            </div>
-            <div class="col border border-3 border-primary-subtle">
-                <b>Benefits of Bootstrap</b><br>
-                By: Coursera
-            </div>
-            <div class="col border border-3" style="margin-right: 13px;">
-                <b>Javascript Basics</b><br>
-                By: University California Davis
-            </div>
-            <hr class="my-4">
-        </div>
-    </div>
-
-
-    <!--Work Experience-->
-    <div class="container" id="workExp" style="padding-top: 55px; margin-top: -60px;">
-        <!--Genetec-->
-        <div class="row">
-            <h5><img src="images/work.png" style="width:40px"><b>   Work Experience</b></h5>
-            <div class="col border border-2 border-primary-subtle">
-                <b>Genetec Technology Berhad</b>
-            </div>
-        </div>
-        <div class="row" >
-            <div class="col border border-2 border-primary-subtle">
-                <b>Position:</b> Mechanical Design Engineer
-            </div>
-            <div class="col border border-2 border-primary-subtle">
-                <b>Duration:</b> November 2023 - Present
-            </div>
-        </div>
-        <div class="row">
-            <div class="col border border-2 border-primary-subtle">
-                <b>Job responsibilities:</b><br>
-                Design project-based industrial automation machinery such as Pick and Place, Conveyor System and Cutting/Stamping Machines using Solidworks.
-            </div>
-        </div>
-        <br>
-        <!--Sony-->
-        <div class="row">
-            <div class="col border border-2 border-primary-subtle">
-                <b>Sony EMCS (M) Sdn Bhd</b>
-            </div>
-        </div>
-        <div class="row" >
-            <div class="col border border-2 border-primary-subtle">
-                <b>Position:</b> Design Engineer
-            </div>
-            <div class="col border border-2 border-primary-subtle">
-                <b>Duration:</b> February 2022 - November 2023
-            </div>
-        </div>
-        <div class="row">
-            <div class="col border border-2 border-primary-subtle">
-                <b>Job responsibilities:</b><br>
-                Conduct Backlight evaluations and data confirmation on Local Dimming features such as dynamic contrast, hybrid blinking and PWM delay for 4 inch sizes per batch in 3 development stages.  
-            </div>
-        </div>
-        <br>
-        <!--Sony Intern-->
-        <div class="row">
-            <div class="col border border-2 border-primary-subtle">
-                <b>Sony EMCS (M) Sdn Bhd</b>
-            </div>
-        </div>
-        <div class="row" >
-            <div class="col border border-2 border-primary-subtle">
-                <b>Position:</b> Intern
-            </div>
-            <div class="col border border-2 border-primary-subtle">
-                <b>Duration:</b> July 2021 - January 2022
-            </div>
-        </div>
-        <div class="row">
-            <div class="col border border-2 border-primary-subtle">
-                <b>Job responsibilities:</b><br>
-                Develop automation project for capturing signal waveforms from oscilloscope using Python Programming Language.  
-            </div>
-        </div>
-        <hr>
-        
-    </div>
-
-    <!--Achievements-->
-    <div class="container" id="achievements" style="padding-top: 60px; margin-top: -60px;">
-        <div class="row">
-            <h5><img src="images/achievements.png" style="height:30px;"><b>  Achievements</b></h5>
-            <div class="col">
-                <ul class="list-group border border-primary-subtle border-5 rounded-5">
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                      <div class="ms-2 me-auto">
-                        <div class="fw-bold">Student Development & Campus Lifestyle Icon Award 2020</div>
-                        Awarded individually as “High Performer Club President 2020: Campus Lifestyle Section” for active
-contributions made as Club President of MFI Badminton Club
-                      </div>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                          <div class="fw-bold">The 1st ASEAN International Student Competitions (AISC)</div>
-                          Participated in the AISC by showcasing the “Multipurpose Hand Sanitiser” which is an innovation to increase
-the functionality of the regular automated hand sanitiser by adding temperature sensors, face recognition and
-IoT.
+            <div class="carousel-inner">
+                <!--Personal Info Slide-->
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row d-block border" >                           
+                            <div class="col" style="height: 450px;">
+                                <br><br>
+                                <h4><span><img src="images/personalInfo.png" style="width:35px"></span><b> Personal Info</b></h4>
+                                <table class="table table-hover table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td><b>Name</b></td>
+                                            <td>Isaiah Chong Kai Ean</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Address</b></td>
+                                            <td>B-12-13A, Saville @Kajang, Jalan Reko, 43000 Kajang, Selangor.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Contact No.</b></td>
+                                            <td>+6014-89900302</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Email</b></td>
+                                            <td>isaiah.chong@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Career Objective</b></td>
+                                            <td style="text-align: justify;">To secure a position as a Front-End Developer based on my skills in HTML, CSS & Javascript</td>
+                                        </tr>
+                                    </tbody>
+                                </table> 
+                            </div>
                         </div>
-                      </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                          <div class="fw-bold">National Innovation and Invention Competition Through Exhibition (iCompEx 2021)</div>
-                          Achieved a Gold Medal for the competition with the innovation project entitled “Vision-based Facemask
-Usage Detection Using Deep Neural Network-MobileNetV2 for COVID-19 Prevention Procedure”.
+                    </div>
+                </div>
+
+                <!--Education-->
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h4><img src="images/education.png" style="width:40px" class="mx-1"><b>Education</b></h4>               
+                            </div>
                         </div>
-                    </li>
-                </ul>
-                <b></b>
-
-            </div>
-        </div>
-        <hr>
-
-    </div>
-
-    <!--Skills-->
-    <div class="container" id="skills" style="padding-top: 55px; margin-top: -60px;">
-        <div class="row my-4 border border-3 rounded-2 border-primary-subtle">
-            <h5><img src="images/skills.png" style="width: 35px;"><b> Skills</b></h5>
-            <div class="col">
-                <ul class="list-group list-group-flush ">
-                    <li class="list-group-item list-group-item-action">HTML</li>
-                    <li class="list-group-item list-group-item-action">CSS</li>
-                    <li class="list-group-item list-group-item-action">Javascript</li>
-                    <li class="list-group-item list-group-item-action">CAD (Solidworks)</li>
-                    <li class="list-group-item list-group-item-action">PLC Programming</li>
-                </ul>
-            </div>
-            <div class="col">
-                <ul class="list-group list-group-flush ">
-                    <li class="list-group-item list-group-item-action">C++ Programming Language</li>
-                    <li class="list-group-item list-group-item-action">Python</li>
-                    <li class="list-group-item list-group-item-action">Communication</li>
-                    <li class="list-group-item list-group-item-action">Collaboration</li>
-                    <li class="list-group-item list-group-item-action">Punctuality</li>
-                  </ul>
-            </div>
-        </div>
+                        <!--Tertiary level education-->
+                        <div class="row" style="height: 405.6px;">  
         
+                            <div class="col border">
+                                <br><br><br><br>
+                                <b>UniKL Malaysia-France Institute</b><br>
+                                Jan 2019 to Jan 2022<br>
+                                Bachelor of Mechatronics Engineering Technology with Honours<br>
+                                CGPA: 3.89
+                            </div>
+                            <div class="col  border" >
+                                <br><br><br><br>
+                                <b>German-Malaysian Institute</b><br>
+                                Jan 2016 to Dec 2018<br>
+                                Diploma in Industrial Electronics (Mechatronics)<br>
+                                CGPA: 3.86
+                            </div>
+                            <div class="col border">
+                                <br><br><br><br>
+                                <b>Sekolah Menengah Kebangsaan Lutong</b><br>
+                                Year 2010 - Year 2014<br>
+                                Sijil Pelajaran Malaysia (SPM)<br>
+                                Results: 9As
+                            </div>
+     
+                        </div>
+                    </div>
+                </div>
+
+                <!--Work Experience-->
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h4><img src="images/work.png" style="width:40px" class="mx-1"><b>Work Experience</b></h4>               
+                            </div>
+                        </div>
+                        <div class="row" style="height: 410.4px;">  
+        
+                            <div class="col border">
+                                <br><br>
+                                <b>Genetec Technology Berhad</b><br>
+                                Nov 2023 - Present<br>
+                                Mechanical Design Engineer<br>
+                                Job Responsibilities:<br>
+                                Design project-based industrial automation machinery 
+                                such as Pick and Place, Conveyor System and Cutting/Stamping 
+                                Machines using Solidworks.
+                            </div>
+                            <div class="col  border" >
+                                <br><br>
+                                <b>Sony EMCS (M) Sdn Bhd</b><br>
+                                Feb 2022 - Nov 2023<br>
+                                Design Engineer<br>
+                                Job Responsibilities:<br>
+                                Conduct Backlight evaluations and data confirmation on 
+                                Local Dimming features such as dynamic contrast, hybrid blinking and PWM delay 
+                                for 4 inch sizes per batch in 3 development stages.
+
+                            </div>
+                            <div class="col border">
+                                <br><br>
+                                <b>Sony EMCS (M) Sdn Bhd</b><br>
+                                Jul 2021 - Jan 2022<br>
+                                Intern<br>
+                                Job Responsibilities:<br>
+                                Develop automation project for capturing signal waveforms from oscilloscope using Python Programming Language. 
+                            </div>
+     
+                        </div>
+                    </div>
+                </div>
+
+                <!--Certification-->
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h4><img src="images/certification.png" style="height: 30px;"><b> Professional Certificates</b></h4>               
+                            </div>
+                        </div>
+
+                        <div class="row" style="height: 205.9px;">
+                            <div class="col border border-3 text-center border-primary-subtle" style="margin-left: 13px;">
+                                <br><br><b>SolidWorks Mechanical Design Certificate</b><br>
+                                Level: Associate
+                            </div>
+                            <div class="col border border-3 text-center">
+                                <br><br><b>Introduction to Python</b><br>
+                                By: Dream Catcher
+                            </div>
+                            <div class="col border border-3 text-center border-primary-subtle" style="margin-right: 13px;">
+                                <br><br><b>Introduction to Web Development with HTML, CSS, Javascript</b><br>
+                                By: IBM
+                            </div>
+                        </div>
+                        <div class="row text-center" style="height: 205.9px;">
+                            <div class="col border border-3" style="margin-left: 13px;">
+                                <br><br><b>Getting Started with Git and Github</b><br>
+                                By: IBM<br><br> 
+                                
+                            </div>
+                            <div class="col border border-3 border-primary-subtle">
+                                <br><br><b>Benefits of Bootstrap</b><br>
+                                By: Coursera
+                            </div>
+                            <div class="col border border-3" style="margin-right: 13px;">
+                                <br><br><b>Javascript Basics</b><br>
+                                By: University California Davis
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Achievements-->
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h4><img src="images/achievements.png" style="height:40px;" class="mx-1"><b>Achievements</b></h4>               
+                            </div>
+                        </div>
+                        <div class="row" style="height: 404.0px;">  
+        
+                            <div class="col border">
+                                <br><br>
+                                <b>Student Development & Campus Lifestyle Icon Award 2020</b><br>
+                                Awarded individually as “High Performer Club President 2020: 
+                                Campus Lifestyle Section” for active contributions made as 
+                                Club President of MFI Badminton Club<br>
+                            </div>
+                            <div class="col  border" >
+                                <br><br>
+                                <b>The 1st ASEAN International Student Competitions (AISC)</b><br>
+                                Participated in the AISC by showcasing the “Multipurpose 
+                                Hand Sanitiser” which is an innovation to increase the 
+                                functionality of the regular automated hand sanitiser by 
+                                adding temperature sensors, face recognition and IoT.<br>
+                            </div>
+                            <div class="col border">
+                                <br><br>
+                                <b>National Innovation and Invention Competition Through Exhibition (iCompEx 2021)</b><br>
+                                Achieved a Gold Medal for the competition with the innovation project entitled 
+                                “Vision-based Facemask Usage Detection Using Deep Neural Network-MobileNetV2 
+                                for COVID-19 Prevention Procedure”.<br>
+
+                            </div>
+     
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <hr>
+        </div>    
+
+            <!--Skills-->
+            <div class="container" id="skills" style="padding-top: 55px; margin-top: -60px;">
+                <h5><img src="images/skills.png" style="width: 35px;"><b> Skills</b></h5>
+                <div class="row text-center align-items-center " style="height:100px;">
+                    
+                    <table class="table table-bordered align-middle"style="table-layout: fixed;height: 300px;">
+                        <tbody>
+                          <tr style="height: 100px;">
+                            <td class="bg-primary-subtle">HTML</td>
+                            <td>CSS</td>
+                            <td class="bg-primary-subtle">Javascript</td>
+                          </tr>
+                          <tr>
+                            <td>C++</td>
+                            <td class="bg-primary-subtle">Python</td>
+                            <td>PLC Ladder Diagram</td>
+                          </tr>
+                          <tr>
+                            <td class="bg-primary-subtle">Communication</td>
+                            <td>Collaboration</td>
+                            <td class="bg-primary-subtle">Punctuality</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
     </div>
-
-
+    
 
 
 
