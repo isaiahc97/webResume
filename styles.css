@@ -73,3 +73,25 @@
   #nextButton{
     width:50px;
   }
+
+  .scrollTop{
+    position:fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 40px;
+    height: 60px;
+    background: url(images/upArrow.png);
+    border-radius: 50%;
+    background-position: center;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 100000;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .scrollTop.activate{
+    visibility:visible;
+    opacity:1;
+  }

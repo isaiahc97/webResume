@@ -51,44 +51,18 @@
         else{
             console.log('Error toggle dark-light mode')
         }
-            
+    
+        
     });
 }());
 
-/*
     window.addEventListener('scroll',function(){
-        let y= window.scrollY 
-        console.log(y)
-        const allnavs = document.querySelectorAll('.nav-link');
-        if (y>650 && y<800){
-            document.querySelector('.active')?.classList.remove ('active');
-            allnavs[1].setAttribute('class','nav-link active');
+        let scrolling= document.querySelector('.scrollTop');
+        if(window.scrollY >40){
+            scrolling.classList.toggle('activate')
         }
-        else if (y>860){
-            document.querySelector('.active')?.classList.remove ('active');
-            allnavs[2].setAttribute('class','nav-link active');
-        }
-        else if (y<650){
-            document.querySelector('.active')?.classList.remove ('active');
-            allnavs[0].setAttribute('class','nav-link active');
-        }
-            
+        
     })
-*/
 
-    function isElementVisible(el) {
-        const rect = el.getBoundingClientRect();
-        const vWidth = window.innerWidth || doc.documentElement.clientWidth;
-        const vHeight = window.innerHeight || doc.documentElement.clientHeight;
-    
-        // Check if the element is out of bounds
-        if (rect.right < 0 || rect.bottom < 0 || rect.left > vWidth || rect.top > vHeight) return false;
-    
-        // Return true if any of the above disjunctions are false
-        return true;
-    }
-    
-    // Usage
-    const myElement = document.querySelector('#myElement');
-    console.log(isElementVisible(myElement));  // Outputs: true or false
+ 
 
