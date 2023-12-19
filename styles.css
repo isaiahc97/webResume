@@ -47,4 +47,29 @@
     }
   }
 
+  #aboutMe{
+    padding-top: 70px;
+    margin-top: -70px;
+  }
 
+  #skills{
+    padding-top: 70px;
+    margin-top: -70px;
+  }
+
+  #contact{
+    padding-top: 70px;
+    margin-top: -70px;
+  }
+
+  hr{
+    padding-bottom: 50px;
+  }
+
+  #prevButton{
+    width:50px;
+  }
+
+  #nextButton{
+    width:50px;
+  }

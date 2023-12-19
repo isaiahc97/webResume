@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Isaiah's Resume</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js" defer></script>
 
 </head>
-  <body style="height: 2500px;">
+  <body>
 
     <!--Navigation bar with fixed to top of screen, expanded items at medium screen size, white background-->
     <nav class="navbar nav-tabs sticky-top navbar-expand-lg bg-primary-subtle">
@@ -37,47 +37,21 @@
         <div class="collapse navbar-collapse " id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a href="#personalInfo" class="nav-link active">
-                        Personal Info
+                    <a href="#aboutMe" class="nav-link active">
+                        About Me
                     </a>
                 </li>
-                <!--Menu item with a drop down list-->
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" 
-                    id="educationDropdown" role="button" 
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                        Education
-                    </a>
-                    <ul class="dropdown-menu " aria-labelledby="educationDropdown">
-                        <li>
-                            <a href="#tertiaryLevel" class="dropdown-item">Tertiary</a>
-                        </li>
-                        <li>
-                            <a href="#secondaryLevel" class="dropdown-item">Secondary</a>
-                    </li>
-                    </ul>
-                </li>
-                <li class="nav-item ">
-                    <a href="#certification" class="nav-link">
-                        Certification
-                    </a>
-                </li>
-                <li class="nav-item ">
-                    <a href="#workExp" class="nav-link">
-                        Work Experience
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#achievements" class="nav-link">
-                        Achievements
-                    </a>
                 </li>
                 <li class="nav-item">
                     <a href="#skills" class="nav-link">
                         Skills
                     </a>
                 </li>
-    
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">
+                        Contact
+                    </a>
+                </li>
             </ul>
         </div>
 
@@ -85,12 +59,12 @@
     </nav>
     
     <!--background wallpaper with my picture-->
-    <div class="container"style="height:450px;">
+    <div class="container"style="height:550px;">
             <div class="card" style="text-align: center;">
                 <img src="images/sceneryDark.jpg" alt="backgroundImage" 
-                class="card-img-top" style="height:450px;" id="bgImage">
+                class="card-img-top" style="height:550px;" id="bgImage">
                 <div class="card-img-overlay card-inverse">
-                    <br><br><br><br><br><br><br>
+                    <br><br><br><br><br><br><br><br><br><br>
                     <img src="images/myPicture.jpg" class="border rounded-5"
                     style="height:180px;"><br>
                     <p id="myName" class="text-light">
@@ -102,48 +76,63 @@
     </div>
 
     <!--Carousel for displaying content-->
-    <div class="container my-4">
+    <div class="container my-0" id="aboutMe" >
         <div id="carousel" class="carousel slide">
+            <!--page indicators for carousel-->
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carousel" 
+                data-bs-slide-to="0" class="active bg-primary" aria-current="true" 
+                aria-label="Slide 1"></button>
+                <button type="button" class="bg-primary" data-bs-target="#carousel" 
+                data-bs-slide-to="1" class="bg-primary" aria-label="Slide 2"></button>
+                <button type="button" class="bg-primary" data-bs-target="#carousel" 
+                data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" class="bg-primary" data-bs-target="#carousel" 
+                data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" class="bg-primary" data-bs-target="#carousel" 
+                data-bs-slide-to="4" aria-label="Slide 5"></button>
             </div>
+
             <div class="carousel-inner">
                 <!--Personal Info Slide-->
                 <div class="carousel-item active">
                     <div class="container">
-                        <div class="row d-block border" >                           
+                        <div class="row border" >     
+                            <div class="col-1"></div>                      
                             <div class="col" style="height: 450px;">
                                 <br><br>
-                                <h4><span><img src="images/personalInfo.png" style="width:35px"></span><b> Personal Info</b></h4>
-                                <table class="table table-hover table-striped">
+                                <h4><span><img src="images/personalInfo.png" 
+                                    style="width:35px"></span><b> Personal Info</b></h4>
+                                <table class="table table-hover border-light" id="infoTable">
                                     <tbody>
                                         <tr>
                                             <td><b>Name</b></td>
-                                            <td>Isaiah Chong Kai Ean</td>
+                                            <td class="bg-primary-subtle">Isaiah Chong Kai Ean</td>
                                         </tr>
                                         <tr>
                                             <td><b>Address</b></td>
-                                            <td>B-12-13A, Saville @Kajang, Jalan Reko, 43000 Kajang, Selangor.</td>
+                                            <td class="bg-primary-subtle">B-12-13A, Saville @Kajang, Jalan Reko, 
+                                                43000 Kajang, Selangor.</td>
                                         </tr>
                                         <tr>
                                             <td><b>Contact No.</b></td>
-                                            <td>+6014-89900302</td>
+                                            <td class="bg-primary-subtle">+6014-89900302</td>
                                         </tr>
                                         <tr>
                                             <td><b>Email</b></td>
-                                            <td>isaiah.chong@gmail.com</td>
+                                            <td class="bg-primary-subtle">isaiah.chong@gmail.com</td>
                                         </tr>
                                         <tr>
                                             <td><b>Career Objective</b></td>
-                                            <td style="text-align: justify;">To secure a position as a Front-End Developer based on my skills in HTML, CSS & Javascript</td>
+                                            <td class="bg-primary-subtle" style="text-align: justify;">
+                                                To secure a position as a 
+                                                Front-End Developer based on my skills 
+                                                in HTML, CSS & Javascript</td>
                                         </tr>
                                     </tbody>
                                 </table> 
                             </div>
+                            <div class="col-1"></div>
                         </div>
                     </div>
                 </div>
@@ -151,36 +140,39 @@
                 <!--Education-->
                 <div class="carousel-item">
                     <div class="container">
-                        <div class="row">
-                            <div class="col">
-                                <h4><img src="images/education.png" style="width:40px" class="mx-1"><b>Education</b></h4>               
+                        <div class="row"> 
+                            <div class="col-1"></div>
+                            <div class="col ">
+                                <h4><img src="images/education.png" 
+                                    style="width:40px" class="mx-1"><b>Education</b></h4>               
                             </div>
+                            <div class="col-1"></div>
                         </div>
                         <!--Tertiary level education-->
                         <div class="row" style="height: 405.6px;">  
-        
-                            <div class="col border">
-                                <br><br><br><br>
+                            <div class="col-1"></div> 
+                            <div class="col bg-primary-subtle text-center">
+                                <br><br><br><br><br>
                                 <b>UniKL Malaysia-France Institute</b><br>
                                 Jan 2019 to Jan 2022<br>
                                 Bachelor of Mechatronics Engineering Technology with Honours<br>
                                 CGPA: 3.89
                             </div>
-                            <div class="col  border" >
-                                <br><br><br><br>
+                            <div class="col text-center">
+                                <br><br><br><br><br>
                                 <b>German-Malaysian Institute</b><br>
                                 Jan 2016 to Dec 2018<br>
                                 Diploma in Industrial Electronics (Mechatronics)<br>
                                 CGPA: 3.86
                             </div>
-                            <div class="col border">
-                                <br><br><br><br>
+                            <div class="col bg-primary-subtle text-center">
+                                <br><br><br><br><br>
                                 <b>Sekolah Menengah Kebangsaan Lutong</b><br>
                                 Year 2010 - Year 2014<br>
                                 Sijil Pelajaran Malaysia (SPM)<br>
                                 Results: 9As
                             </div>
-     
+                            <div class="col-1"></div>
                         </div>
                     </div>
                 </div>
@@ -189,14 +181,17 @@
                 <div class="carousel-item">
                     <div class="container">
                         <div class="row">
+                            <div class="col-1"></div>
                             <div class="col">
-                                <h4><img src="images/work.png" style="width:40px" class="mx-1"><b>Work Experience</b></h4>               
+                                <h4><img src="images/work.png" style="width:40px" 
+                                    class="mx-1"><b>Work Experience</b></h4>               
                             </div>
+                            <div class="col-1"></div>
                         </div>
                         <div class="row" style="height: 410.4px;">  
-        
-                            <div class="col border">
-                                <br><br>
+                            <div class="col-1"></div>
+                            <div class="col">
+                                <br><br><br>
                                 <b>Genetec Technology Berhad</b><br>
                                 Nov 2023 - Present<br>
                                 Mechanical Design Engineer<br>
@@ -205,26 +200,26 @@
                                 such as Pick and Place, Conveyor System and Cutting/Stamping 
                                 Machines using Solidworks.
                             </div>
-                            <div class="col  border" >
-                                <br><br>
+                            <div class="col bg-primary-subtle" >
+                                <br><br><br>
                                 <b>Sony EMCS (M) Sdn Bhd</b><br>
                                 Feb 2022 - Nov 2023<br>
                                 Design Engineer<br>
                                 Job Responsibilities:<br>
-                                Conduct Backlight evaluations and data confirmation on 
+                                Conduct backlight evaluations and data confirmation on 
                                 Local Dimming features such as dynamic contrast, hybrid blinking and PWM delay 
                                 for 4 inch sizes per batch in 3 development stages.
 
                             </div>
-                            <div class="col border">
-                                <br><br>
+                            <div class="col">
+                                <br><br><br>
                                 <b>Sony EMCS (M) Sdn Bhd</b><br>
                                 Jul 2021 - Jan 2022<br>
                                 Intern<br>
                                 Job Responsibilities:<br>
                                 Develop automation project for capturing signal waveforms from oscilloscope using Python Programming Language. 
                             </div>
-     
+                            <div class="col-1"></div>
                         </div>
                     </div>
                 </div>
@@ -233,39 +228,47 @@
                 <div class="carousel-item">
                     <div class="container">
                         <div class="row">
+                            <div class="col-1"></div>
                             <div class="col">
                                 <h4><img src="images/certification.png" style="height: 30px;"><b> Professional Certificates</b></h4>               
                             </div>
+                            <div class="col-1"></div>
                         </div>
 
                         <div class="row" style="height: 205.9px;">
-                            <div class="col border border-3 text-center border-primary-subtle" style="margin-left: 13px;">
-                                <br><br><b>SolidWorks Mechanical Design Certificate</b><br>
+                            <div class="col-1"></div>
+                            <div class="col border border-3 text-center 
+                            border-primary-subtle" style="margin-left: 13px;">
+                                <br><br><br><b>SolidWorks Mechanical Design Certificate</b><br>
                                 Level: Associate
                             </div>
                             <div class="col border border-3 text-center">
-                                <br><br><b>Introduction to Python</b><br>
+                                <br><br><br><b>Introduction to Python</b><br>
                                 By: Dream Catcher
                             </div>
-                            <div class="col border border-3 text-center border-primary-subtle" style="margin-right: 13px;">
-                                <br><br><b>Introduction to Web Development with HTML, CSS, Javascript</b><br>
+                            <div class="col border border-3 text-center 
+                            border-primary-subtle" style="margin-right: 13px;">
+                                <br><br><br><b>Introduction to Web Development with HTML, CSS, Javascript</b><br>
                                 By: IBM
                             </div>
+                            <div class="col-1"></div>
                         </div>
                         <div class="row text-center" style="height: 205.9px;">
+                            <div class="col-1"></div>
                             <div class="col border border-3" style="margin-left: 13px;">
-                                <br><br><b>Getting Started with Git and Github</b><br>
+                                <br><br><br><b>Getting Started with Git and Github</b><br>
                                 By: IBM<br><br> 
                                 
                             </div>
                             <div class="col border border-3 border-primary-subtle">
-                                <br><br><b>Benefits of Bootstrap</b><br>
+                                <br><br><br><b>Benefits of Bootstrap</b><br>
                                 By: Coursera
                             </div>
                             <div class="col border border-3" style="margin-right: 13px;">
-                                <br><br><b>Javascript Basics</b><br>
+                                <br><br><br><b>Javascript Basics</b><br>
                                 By: University California Davis
                             </div>
+                            <div class="col-1"></div>
                         </div>
                     </div>
                 </div>
@@ -274,58 +277,66 @@
                 <div class="carousel-item">
                     <div class="container">
                         <div class="row">
+                            <div class="col-1"></div>
                             <div class="col">
                                 <h4><img src="images/achievements.png" style="height:40px;" class="mx-1"><b>Achievements</b></h4>               
                             </div>
+                            <div class="col-1"></div>
                         </div>
                         <div class="row" style="height: 404.0px;">  
-        
-                            <div class="col border">
-                                <br><br>
+                            <div class="col-1"></div>
+                            <div class="col bg-primary-subtle">
+                                <br><br><br>
                                 <b>Student Development & Campus Lifestyle Icon Award 2020</b><br>
                                 Awarded individually as “High Performer Club President 2020: 
                                 Campus Lifestyle Section” for active contributions made as 
                                 Club President of MFI Badminton Club<br>
                             </div>
-                            <div class="col  border" >
-                                <br><br>
+                            <div class="col" >
+                                <br><br><br>
                                 <b>The 1st ASEAN International Student Competitions (AISC)</b><br>
                                 Participated in the AISC by showcasing the “Multipurpose 
                                 Hand Sanitiser” which is an innovation to increase the 
                                 functionality of the regular automated hand sanitiser by 
                                 adding temperature sensors, face recognition and IoT.<br>
                             </div>
-                            <div class="col border">
-                                <br><br>
+                            <div class="col bg-primary-subtle">
+                                <br><br><br>
                                 <b>National Innovation and Invention Competition Through Exhibition (iCompEx 2021)</b><br>
                                 Achieved a Gold Medal for the competition with the innovation project entitled 
                                 “Vision-based Facemask Usage Detection Using Deep Neural Network-MobileNetV2 
                                 for COVID-19 Prevention Procedure”.<br>
 
                             </div>
-     
+                            <div class="col-1"></div>
                         </div>
                     </div>
                 </div>
 
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button class="carousel-control-prev 
+            bg-primary" type="button" 
+            data-bs-target="#carousel" data-bs-slide="prev" id="prevButton">
+                <span class="carousel-control-prev-icon" 
+                aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button class="carousel-control-next 
+            bg-primary w-0" type="button" 
+            data-bs-target="#carousel" data-bs-slide="next" id="nextButton">
+                <span class="carousel-control-next-icon" 
+                aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-            <hr>
         </div>    
+        <hr>
 
             <!--Skills-->
-        <div class="container" id="skills" style="padding-top: 55px; margin-top: -60px;">
+        <div class="container" id="skills" style="padding-top: -500px;margin-top: -100px;">
             <h5><img src="images/skills.png" style="width: 35px;"><b> Skills</b></h5>
             <div class="row text-center align-items-center ">
                 
-                <table class="table table-bordered align-middle"style="table-layout: fixed;height: 300px;">
+                <table class="table table-bordered border-primary-subtle align-middle"style="table-layout: fixed;height: 300px;">
                     <tbody>
                         <tr>
                         <td class="bg-primary-subtle">HTML</td>
@@ -351,14 +362,13 @@
 
   </body>
   <footer>
-    <div class="container">
+    <div class="container foot" id="contact">
         <div class="row">
-            <div class="col">
-                
-                <table class="table table-primary table-borderless ">
+            <div class="col-6">
+                <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th colspan="3"><h6><b>Contact Information</b></h6></th>
+                            <th colspan="3"><h5><img src="images/contact.png" style="width: 35px;"><b> Contact Information</b></h5></th>
                         </tr></thead>
                     <tbody>
                       <tr>
@@ -379,7 +389,11 @@
                     </tbody>
                   </table>
             </div>
+            <div class="d-flex align-items-center col-6" style="text-align: center;padding-left: 120px;">
+                <a href="resume/Resume.pdf" class="link-opacity-75-hover border border-warning rounded-4 border-3 p-4 w-75 h5" download>Download Full Resume</a>
+            </div>
         </div>
     </div>
   </footer>
+
 </html>
