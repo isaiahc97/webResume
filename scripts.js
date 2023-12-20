@@ -51,18 +51,28 @@
         else{
             console.log('Error toggle dark-light mode')
         }
+    })
     
-        
-    });
+
+
+
 }());
+
 
     window.addEventListener('scroll',function(){
         let scrolling= document.querySelector('.scrollTop');
-        if(window.scrollY >40){
-            scrolling.classList.toggle('activate')
-        }
-        
-    })
+        scrolling.classList.toggle('activate',window.scrollY >400); 
+    });
 
+
+    function goTop(){
+        const navlinkEls = document.querySelectorAll('.nav-link');
+        console.log("top now")
+        window.scrollTo({
+            top:0
+        })
+        document.querySelector('.active')?.classList.remove ('active');
+        navlinkEls[0].classList.add('active');
+    }
  
 
