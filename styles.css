@@ -14,7 +14,8 @@
   }
 
   hr{
-    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #303030;
   }
 
   #prevButton{
@@ -23,6 +24,11 @@
 
   #nextButton{
     width:50px;
+  }
+
+  .bdr {
+    border-radius: 12px;
+    overflow: hidden;
   }
 
   .scrollTop{
@@ -50,4 +56,16 @@
 
   body {
     font-family: 'Montserrat';
+  }
+
+  .socMedDark{
+    color:rgb(255, 255, 255);
+    font-size: xx-large;
+    margin-right: 15px;
+  }
+
+  .socMedLight{
+    color:rgb(0, 0, 0);
+    font-size: xx-large;
+    margin-right: 15px;
   }

@@ -19,6 +19,7 @@
     let darkLightIcon= document.querySelector('#modeIcon');
     let bgImage= document.querySelector('#bgImage');
     let myName= document.querySelector('#myName');
+    let socMed= document.querySelectorAll('.socMedIcons')
     darkModeToggle.addEventListener('click', function(evt){
         evt.preventDefault();
         console.log (currentMode.getAttribute('data-bs-theme'));
@@ -33,7 +34,12 @@
             myName.setAttribute('class','text-light')
             //change border table lines for personal info 
             document.querySelector('#infoTable')?.classList.remove ('border-dark');
-            document.querySelector('#infoTable')?.classList.add ('border-light');           
+            document.querySelector('#infoTable')?.classList.add ('border-light');   
+            socMed.forEach(socMedIcons =>{
+                socMedIcons.classList.remove ('socMedLight');
+                socMedIcons.classList.add('socMedDark');
+            });
+
         }
         else if (currentMode.getAttribute('data-bs-theme') == "dark"){
             //set HTML tag, theme to light
@@ -44,9 +50,14 @@
             bgImage.setAttribute('src','images/sceneryLight.jpg')
             //change text to black for light theme
             myName.setAttribute('class','text-dark')
-            //change border table lines for personal info
+            /*change border table lines for personal info
             document.querySelector('#infoTable')?.classList.remove ('border-light');
-            document.querySelector('#infoTable')?.classList.add ('border-dark');
+            document.querySelector('#infoTable')?.classList.add ('border-dark');*/
+            socMed.forEach(socMedIcons =>{
+                socMedIcons.classList.remove ('socMedDark');
+                socMedIcons.classList.add('socMedLight');
+            });
+
         }
         else{
             console.log('Error toggle dark-light mode')
