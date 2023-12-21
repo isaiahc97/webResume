@@ -80,7 +80,7 @@
         const navlinkEls = document.querySelectorAll('.nav-link');
         console.log("top now")
         window.scrollTo({
-            top:0
+            top:0,
         })
         document.querySelector('.active')?.classList.remove ('active');
         navlinkEls[0].classList.add('active');
